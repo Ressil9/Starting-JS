@@ -13,17 +13,69 @@
     // unshift permet de rajouter des prenoms en debut de tableau
     //let taille = prenom.unshift("Floriant","Chloe") ;
 
-    // supprime le premier element du tableau
+    // shift supprime le premier element du tableau
     //let suppr = prenom.shift("Floriant","Chloe") ;
 
-    prenom.splice(3, 0, 'Florient','Chloe') ;
+
+    // splice permet d'ajouter ou de retire un element/s du tableau
+    // splice (n,m,...,...) n correspond a l'indice a laquelle on veut ajouter ou supprimer des elements et m = 0 on ajoute
+    //prenom.splice(3, 0, 'Florient','Chloe') ;  on ajoute ces 2 elements a partir du troisieme 
+    prenom.splice(2,2) ;  //on supprime ces 2 elements a partir du troisieme splice (n,m) n=indice et m= nbr element a supp
+    
 
 
     for (let i = 0; i < prenom.length ; i ++) {
         p += "Num°" + [i+1] +":"+ prenom[i] +"\n" ;
     }
 
-    console.log(p);
+
+
+    let prenoms = ['Zouer','Victor','Julia','Claire'], ps = "";
+    //premet de ranger dans l'ordre croissant priorite sur les majuscules
+    prenoms.sort();
+
+    //permet d'inverser l'ordre du tableau 
+    prenoms.reverse();
+
+    let pr = ['Zouer','Victor','Julia','Claire'], ps1 = "";
+
+    //transforme un tableau en une chaine de caractere
+    //let jointure = pr.join('/');
+
+
+    // permet de selectionner un intervalle d'elements d'un tableau
+    let garcons = pr.slice(2,3) ;
+
+
+    for (let i = 0; i < pr.length ; i ++) {
+            ps1 += "Num°" + [i+1] +":"+ pr[i] +"\n" ;
+        }
+
+        // console.log("La tableau initial est :\n"+
+        // ps1+ ("\n\n\n")+ "Tableau de slice :\n"+
+        // garcons );
+
+    let boy = ['Zouer','Victor','Max'];
+    let girl = ['Zoa','Claire','Julie'];
+    let prof = ['coucou'] ;
+
+    // permet de rassembler n tableaux dans un nouveau tableau
+    let gb = boy.concat(girl,prof);
+    let bg = girl.concat(boy);
+
+    console.log("Voici gb :\n"+gb+"\n"+"Voici bg : \n"+bg);
     
+
+
+
+
+
+    
+    
+    
+    
+
+
+
     </script>
 </html>
