@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS3</title>
+</head>
+<body>
+    <H1>Troisieme partie en JavaScript</H1>
+    
+</body>
+    <script>
+        let prenom = ['Martin','Victor','Julia','Claire'] ;
+
+        let p = " ";
+        // donne la taille d'un taleau
+        let Size = prenom.length ;
+        
+        // cette manipulation permet de rajouter un element au tableau
+        prenom [Size]= "Robert" ;  
+
+        for (let i = 0 ; i < prenom.length ; i++) {
+            p+= '\nPrenom n°'+(i+1) + ": " + prenom[i] ;
+        }
+
+        //sorte de tableau associatif      une cle est associe a une valeur tq clé : valeur 
+
+        let name = {
+            prenom1 : "Martin",
+            prenom2 : "Victor",
+            prenom3 : "Julia",
+            prenom4 : "Claire",
+            prenom5 : "Robert"
+        } , p1 = "";
+
+        for (let balou in name) {
+            p1+= balou + ': '+ name[balou] + '\n'
+        }
+
+        //console.log(p1);
+
+       
+/*****************************Notions importantes tableau***************************************/
+/*****************************Notions importantes tableau***************************************/
+/*****************************Notions importantes tableau***************************************/
+/*****************************Notions importantes tableau***************************************/
+
+
+        let prenom2 = ['Pierre','Victor','Julia','Claire'], p3 = "";
+        // push permet de rajouter des elements en fin de tableau
+        let ajout = prenom2.push('Florian', 'Dorian') ;
+        //permet supprimer un element en fin de tableau
+        let supp = prenom2.pop() ;
+
+
+        for ( i = 0 ; i < prenom2.length ; i++ ) {
+            p3 += "Le prénom n°" +(i+1)+ ": "+ prenom2[i]+ "\n" ;
+        }
+
+
+        console.log(p3 + "\n\n\n" + supp);
+        
+    </script>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>    
+</body>
+    <script>
+    let prenom = ['Pierre','Victor','Julia','Claire'], p = "";
+    
+    // unshift permet de rajouter des prenoms en debut de tableau
+    //let taille = prenom.unshift("Floriant","Chloe") ;
+
+    // supprime le premier element du tableau
+    //let suppr = prenom.shift("Floriant","Chloe") ;
+
+    prenom.splice(3, 0, 'Florient','Chloe') ;
+
+
+    for (let i = 0; i < prenom.length ; i ++) {
+        p += "Num°" + [i+1] +":"+ prenom[i] +"\n" ;
+    }
+
+    console.log(p);
+    
+    </script>
+</html>
