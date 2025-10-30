@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Structure ternaire</h1>
+        <p>
+            L'utilisation des ternaires permettent de gagner
+            des lignes de codes sans passer par des conditions if
+        </p>
+</body>
+<script>
+
+    // Demonstration de l'utilisation
+    // d'une structure ternaires 
+    let heure = 19;
+    let bon = "";
+    
+    bon = (heure <= 19) ? "Bonjour" : "Bonsoir";
+    //console.log(bon);
+
+
+
+
+    /******** Utilisation du switch***********/
+    
+    // let heures = 9;
+    // switch (heures) {
+    //     case 8 : alert ("Il est 8 heures") ;
+    //     break;
+    //     case 9 : alert ("Il est 9 heures") ;
+    //     break;
+    //     case 10 : alert ("Il est 10 heures") ;
+    //     break;
+    //     case 12 : alert ("Il est 10 heures") ;
+    //     break;
+    //     // Cas qui se déclenche si aucun des cas ne se présente
+    //     default : alert ("heure incorrect") ; 
+    // }
+
+
+    /******** Utilisation des boucles***********/
+
+    let x = 0;
+    while (x < 10) {
+        //alert ("x contient la valeur de " + x );
+        x++ ;
+    }
+
+
+
+    /******** Intro au object***********/
+
+
+    let moi = {
+        prenom : "Pierre",
+        nom : "Giraud" ,
+        age : 25,
+        identite : function(){
+            return  "prenom : "+ this.prenom + 
+                    "\nnom : "+ this.nom +
+                    "\nage : "+ this.age ;
+        } 
+    }
+
+    //alert (moi.identite()) ;
+    
+
+
+    /******** Valeur primitives et object natifs***********/
+
+
+    let primitive = "je suis une valeur primitive";
+    // .lenght permet de connaitre la longueur d'un element
+    let longueur_prim = primitive.length ;
+    let paj_prim = primitive.toUpperCase() ;
+    
+    // chaine est un objet de type string
+    let chaine = new String ("Je suis un objet");
+    let maj_prim = chaine.toUpperCase( ) ;
+    
+
+    /*alert ( "la longueur de prim : " + longueur_prim +
+        "\nmaj de prim : " + paj_prim +
+        "\nmaj de chaine : " + maj_prim
+);*/
+
+
+
+
+
+    /******** Object et constructeur***********/
+
+    //un constructeur est une fonction 
+
+    function Identite (p, n, a) {
+        this.prenom = p;
+        this.nom = n;
+        this.age = a;
+    }
+
+    // pierre herite des proprietes du constructeur Identite
+    let pierre = new Identite ("Pierre","Giraud", 25);
+    let roni = new Identite ("Roni","Viktor", 20);
+
+    // si une modification se fait sur papaleme alors cela changera aussi roni
+    let papaleme = roni ;
+    papaleme.prenom = 'Papaleme' ;
+
+     alert ("Prenom de Roni : "+ roni.prenom 
+            + "\nPrenom de Papaleme : "+ papaleme.prenom ) ;
+
+
+</script>
+</html>

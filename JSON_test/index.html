@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+    <script>
+    
+    // We use `` because most of the time it's 
+    // a text that we get from the JSON file
+    let footballer =
+    `[
+        {
+            "name":"Messi",
+            "numJersey": 10,
+            "Birthplace": "Rosario" 
+        },
+        {
+            "name":"Ronaldo",
+            "numJersey": 7,
+            "Birthplace": "Lisbonne"
+        }
+    ]`
+    // By using JSON.parse() we are converting it 
+    // back to an object that we can manipulate
+    console.log(JSON.parse(footballer));
+    console.log(JSON.parse(footballer)[0].name);
+    console.log(JSON.parse(footballer)[1].name);
+
+    
+    </script>
+</html>

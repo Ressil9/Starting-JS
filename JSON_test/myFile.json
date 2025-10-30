@@ -1,0 +1,14 @@
+
+// A JSON file is always between brackets []
+[
+    {
+        "name":"Messi",
+        "numJersey": 10,
+        "Birthplace": "Rosario" 
+    },
+    {
+        "name":"Ronaldo",
+        "numJersey": 7,
+        "Birthplace": "Lisbonne"
+    }
+]
