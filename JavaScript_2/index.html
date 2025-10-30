@@ -110,8 +110,89 @@
     let papaleme = roni ;
     papaleme.prenom = 'Papaleme' ;
 
-     alert ("Prenom de Roni : "+ roni.prenom 
-            + "\nPrenom de Papaleme : "+ papaleme.prenom ) ;
+     //alert ("Prenom de Roni : "+ roni.prenom 
+     //       + "\nPrenom de Papaleme : "+ papaleme.prenom ) ;
+
+
+
+
+
+
+
+
+    /******** Object string ***********/
+
+    let text = "      j'apprend le javascript             " ;
+
+    let textMin = text.toLowerCase() ;
+    let textMaj = text.toUpperCase() ;
+
+    // permet de sélectionner un caractere
+    let char1 = text.charAt(3);
+    let char2 = text.charAt(13);
+
+    // permettent de rechercher un e caraactere dans une chaine 
+    // si le caractere n'existe pas alors lavaleur retourné est -1
+    let premiere = text.indexOf('p',7) ; // pour dire qu'on recherche le premier p a partir d'une position donnee
+    let derniere = text.lastIndexOf('p');
+    let sequence = text.indexOf ('app') ;
+    //Remplace un mot dans une chaine de caractere
+    let remplacement = text.replace("javascript","JS") ;
+
+    //permet d'extraire un element dans une chaine et la mettre dans une nouvelle 
+    // on peut mettre un signe moins pour prendre des mots qui sont a la fin
+    let slice = text.slice(-11, -1) ;
+ 
+    // Supprimer les espaces inutiles en entrée et en sortie
+    let textClean = text.trim();
+    // console.log(
+    //     "Avant coupe : " + text +
+    //     "\nApres coupe : " + textClean
+    //     );
+    
+
+
+
+
+    /********************** Object Number *************************/
+
+    
+    let min = Number.MIN_VALUE ;
+    let max = Number.MAX_VALUE ;
+    let ifneg = Number.NEGATIVE_INFINITY;
+    let ifpos = Number.POSITIVE_INFINITY;
+    let NotaNumber = Number.NaN;
+
+    // console.log(
+    //     "min : " + min +
+    //     "\nmax : " + max +
+    //     "\nnegatif : " + ifneg +
+    //     "\npositif : " + ifpos +
+    //     "\npas un nombre : " + NotaNumber
+    // );
+
+
+    let z = 10.4123 ;
+
+    //permet de convertir une valeur en une chaine
+    let ConvertChar = z.toString();
+
+
+    // permet de tronquer la partie décimal d'une variable choisir n nombre apres virgule
+    let d = z.toFixed(2);
+    // permet de choisir le nombre total de chiffre decimal et entier a garder
+    let d1 = z.toPrecision(5) ;
+    // convertir sous forme exponnentiel
+    let d2 = z.toExponential(5) ;
+    
+    let ch1 = "123.022020" ;
+    // permet de convertir une chaine de caractere en nombre 
+    let chInt = parseInt(ch1);
+    let chFloat = parseFloat(ch1);
+
+    console.log(chInt+ "     "+ chFloat);
+
+
 
 
 </script>
