@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // Les fonctions anonymes par besoin de lui donner un nom
+    // La variable elle en revanche va se comporter comme une fonction 
+    let carre = function(x) {
+        alert(x*x);
+    } ; // on met le ; car c'est une déclaration de variable
+    // permet de demander a l'utilisateur d'entrer une donnée 
+    //let y = prompt("Entrez un nombre") ;
+
+    //carre (y);
+
+
+    
+    // les fonctions auto invoqués
+
+    (function (w){
+        x = prompt ("Entrez un nombre") ;
+        alert("carre ="+ x*x) ;
+    })();
+
+</script>
+</html> 
