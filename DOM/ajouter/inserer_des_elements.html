@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="gros_titre">Découverte du DOM HTML</h1>
+
+    <p class="para">Du texte et <a href="https://google.com">un lien</a></p>
+    <p class="para">Un deuxieme paragraphe</p>
+</body>
+<script>
+    // on creer un paragraphe
+    let newPara = document.createElement('p');
+    // on donne l'id nouveau 
+    newPara.id = 'nouveau';
+    // on creer notre texte
+    let texte = document.createTextNode('Inséré');
+    // on insere le texte dans notre paragraphe
+    newPara.appendChild(texte);
+    // on met le para dans le body qui sera toujours placer en dernier 
+    document.body.appendChild(newPara) ;
+
+
+    // on creer un texte a inserer
+    let tex= document.createTextNode('bonba');
+    // permet de sélectionner un paragraphe
+    let para1 = document.querySelector('.para');
+    // permet d'inserer un paragraphe a l'endroit que l'on veut 
+    document.body.insertBefore(tex, para1) ;
+
+
+
+
+
+</script>
+</html>
