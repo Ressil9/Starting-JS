@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <H1>L'objet Math</H1>
+    <p>
+        Par defautl Math.random renvoi une valeur entre 0 et 1 si l'on veut une valeur compris entre 0
+        et 1000 par exemple alors il faudra le multiplier par 1000
+    </p>
+</body>
+<script>
+
+    let x = Math.random()*1000;
+    // permet d'arrondir
+    let y = Math.round(x);
+    //permet d'arrondir a l'entier superieur
+    let sup = Math.floor(x);
+    //permet d'arrondir a l'entier inferieur
+    let inf = Math.ceil(x);
+
+    // Si on veut prendre le max ou min d'un tableau il faut ...Tab
+    let min = Math.min(0,1,9,122,7,0);
+    let max = Math.max(0,1,9,122,7,0);
+
+    let w = -12 ;
+    // Permet de faire la valeur absolue
+    let varabsW = Math.abs(w);
+
+
+    let e = 16 , v = 2;
+
+    //Permet d'effectuer la puissance de deux elements
+    var power = Math.pow(e,v);
+    // Nous permet d'avoir une racine
+    var root = Math.sqrt(e);
+    var cos = Math.cos(e);
+    var sin = Math.sin(e);
+    var pi = Math.PI;
+
+    console.log("Voici le pow "+power+"\n"+"racine : "+root);
+    
+
+    
+
+</script>
+</html>
