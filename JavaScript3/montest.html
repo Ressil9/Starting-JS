@@ -8,13 +8,48 @@
 <body>
 </body>
 <script>
-    let chaine = `name,age,city
+ 
+    let chaine = `
+    name,age,city
     John,25,New York
     Alice,30,Los Angeles
     Bob,28,Chicago
-    Eve,22,Boston`;
+    Eve,22,Boston
+    `;
 
-    let Myarray = chaine.split()
+    // Permet de mettre mon string dans un tableau des quil y a un retour a la ligne
+    let MyArray = chaine.trim().split("\n") ;
+    // me fournit la taille de mon tableau
+    let size = MyArray.length ;
+
+    // Permet d'appliquer a toute les lignes la fonction trim
+    MyArray = MyArray.map(ligne => ligne.trim()) ;
+
+    // Permet de déclarer un tableau a deux dimensions
+    let tab = [];
+    tab [0] = [] ;
+
+    // Permet de separer les differentes catégories
+    //tab [0] = MyArray[0].split(",") ;
+    // Donne la taille du tableau a 2D
+    //let tabSize = tab[0].length; 
+
+    let tabSize = MyArray[0].split(",").length;
+  
+
+    for (let i = 0; i < size; i++) {
+        tab[i] = MyArray[i].split(",");
+        console.log(tab[i].join(" | "));
+    }
+
+
+   // alert(tab[0][0] + "\n" + tab[1][0]);
+    
+
+
+    /*console.log(MyArray + "\n\nLa taille du premier tableau est "+ size +"\n\n"
+    + tab +"\n"+ "La taille du second tableau est "+tabSize);*/
+
 
 
 </script>
