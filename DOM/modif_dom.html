@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le DOM HTML</title>
+</head>
+<body>
+    <h1 id="gros_titre">Découverte du DOM HTML</h1>
+
+    <p class="para">Du texte et <a href="https://google.com">un lien</a></p>
+    <p class="para">Un deuxieme paragraphe</p>
+</body>
+    <script>
+        // °°°°°°°°°°°°°°°°°Affichage seulement°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+        let titre = document.getElementById('gros_titre');
+        let texteTitre = titre.innerHTML;
+
+        let textPara = document.querySelector('.para').textContent;
+
+        alert ( "titre : " + texteTitre + "textPara : " + textPara) ;
+
+
+        // °°°°°°°°°°°°°°°°°° Modification °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+
+        // On a acceder a l'id gros titre puis on a modifié son contenu
+        document.getElementById('gros_titre').innerHTML = 'Titre <mark>modifié</mark>';
+        // On accede a la premiere class para et on ajoute du contenu 
+        document.querySelector('.para').innerHTML += '\n\n je me suis rajouté';
+        // On modifie un element specifique
+        document.querySelector('a').href = "https://wikipedia.com" ; 
+        // Pour modifier le nom d'une classe on utilise className car classe est reserver au js
+        document.querySelector('.para').className = "pooul" ; 
+
+        document.getElementById('gros_titre').style.color = 'blue'; 
+        document.getElementById('gros_titre').style.fontSize = '40px'; 
+
+
+    </script>
+</html>
