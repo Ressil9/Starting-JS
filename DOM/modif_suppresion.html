@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="gros_titre">Découverte du DOM HTML</h1>
+    <h1 id="pol">Ronaldo meilleur que Messi</h1>
+    <h1 id="klk">Hello World</h1>
+
+    <p>Du texte et <a href="https://google.com">un lien</a></p>
+    <p class="para">Un deuxieme paragraphe</p>
+</body>
+<script>
+    // selection du ttire par l'id
+    var titre =document.getElementById('gros_titre');
+    // on selectionne seulement le body
+    var parent = document.body;
+    // on peut a present retirer l'element
+    parent.removeChild(titre);
+
+    var opinion = document.createElement('h1');
+    opinion.innerHTML = 'Messi meilleur que ronaldo' ;
+    var faux = document.getElementById("pol");
+    parent.replaceChild (opinion, faux)
+    
+    var Salut = document.getElementById ("klk") ;
+    var Fr = document.createElement('h1');
+    Fr.innerHTML = "Salut j'ai remplace le hello";
+    parent.replaceChild (Fr, Salut);
+
+</script>
+</html>
