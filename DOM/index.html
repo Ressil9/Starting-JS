@@ -6,11 +6,40 @@
     <title>Le DOM HTML</title>
 </head>
 <body>
-    <h1>Découverte du DOM HTML</h1>
+    <h1 id="gros_titre">Découverte du DOM HTML</h1>
 
-    <p>
-        Du texte et <a href="https://google.com">un lien</a>
-    </p>
+    <p>Du texte et <a href="https://google.com">un lien</a></p>
+    <p class="para">Un deuxieme paragraphe</p>
+    <p class='para'>Un troisieme paragraphe</p>
     
 </body>
+    <script>
+        // Sélectionne l'élément HTML qui a l'identifiant id='gros_titre' et le stocke dans la variable titre
+        let titre = document.getElementById('gros_titre');
+        // Récupère tous les éléments <p> du document et les stocke dans la variable 'tableau'
+        let tab = document.getElementsByTagName('p');
+        // Récupère tous les éléments qui ont la class='para' 
+        let tableau = document.getElementsByClassName('para');
+        
+        // Sélectionne le premier lien (<a>) contenu dans un paragraphe (<p>) et le stocke dans la variable 'lien'
+        let lien = document.querySelector ('p a');
+        // Sélectionne tous les éléments ayant la classe 'para' et les stocke dans la variable 'p'
+        let p = document.querySelectorAll('.para');
+
+        //innierHTML permet de récuperer le contenu d'un élément HTML
+        let title = document.getElementById('gros_titre').innerHTML;
+
+        let tit = document.querySelector('p').innerHTML;
+
+        // recupere seulement le texte present al'interieur d'un element
+        let tita = document.querySelector('p').textContent;
+
+        let titre_page = document.title ;
+        let titre_body = document.body ;
+        let titre_links = document.links ;
+
+        alert (titre_page + "\n" + titre_body + "\n" + titre_links[0]) ; 
+
+
+    </script>
 </html>
