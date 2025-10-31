@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+    <script>
+        // Permet d'afficher la date 
+        let datelit = Date();
+        // Permet d'afficher la date en ms
+        let datems = Date.now();
+
+        // creation d'un objet de type date 
+        let d = new Date () ;
+        let d1 = new Date () ;
+
+        /////////////::::methode getter ///////////////////////
+        let dms = d.getTime() ;
+        let dy = d.getFullYear();
+        let dmo = d.getMonth();
+        let ddate = d.getDate();
+        let dday = d.getDay();
+
+        let dh = d.getHours();
+        let dm = d.getMinutes();
+        let ds = d.getSeconds();
+        let ddms = d.getMilliseconds();
+
+        ///////////////////methode setter////////////////////////////////////
+        d.setFullYear(2015,5,15) ;
+        d.setHours(12) ;
+        d.setMinutes(30) ;
+        d.setSeconds(15) ;
+
+        let jour = ['Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi','Dimanche'];
+        let mois = ['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Aout','Septembre','Octobre','Novembre','Décembre'];
+
+        alert (d+"\n\n"+"La date du jour est le "+jour[dday]+ " "+dday+" "+mois [dmo]+" "+ dy);  
+        
+    </script>
+</html>
