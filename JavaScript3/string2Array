@@ -1,0 +1,38 @@
+let chaine = `
+
+
+name,age,city
+John,25yo,New York
+Alice,30yo,Los Angeles
+Bob,28yo,Chicago
+Eve,22yo,Bosto
+
+`;
+
+    // Permet de mettre ma chaine dans un tableau a chaque fois quil y a un retour a la ligne
+    let MyArray = chaine.trim().split("\n") ;
+    // me fournit la taille de mon tableau
+    let size = MyArray.length ;
+
+    MyArray = MyArray.map(function(ligne) {
+    return ligne.trim();
+    });
+
+// Crée un tableau 2D (tableau de tableaux)
+    let tab = MyArray.map(function(ligne) {
+    return ligne.split(",");
+    });
+
+// Convertit les âges (colonne 1) en nombres entiers
+for (let i = 1; i < tab.length; i++) { // on saute l'en-tête
+    // Retire tout ce qui n'est pas un chiffre
+    tab[i][1] = parseInt(tab[i][1].replace(/\D/g, ""));
+}
+
+// Affiche le tableau de façon lisible
+for (let i = 0; i < tab.length; i++) {
+    console.log(tab[i].join(" | "));
+}
+
+// Exemple d’accès :
+// alert(tab[0][0] + "\n" + tab[1][0]);

@@ -11,10 +11,10 @@
  
     let chaine = `
     name,age,city
-    John,25,New York
-    Alice,30,Los Angeles
-    Bob,28,Chicago
-    Eve,22,Boston
+    John,25yo,New York
+    Alice,30yo,Los Angeles
+    Bob,28yo,Chicago
+    Eve,22yo,Boston
     `;
 
     // Permet de mettre mon string dans un tableau des quil y a un retour a la ligne
@@ -26,22 +26,22 @@
     MyArray = MyArray.map(ligne => ligne.trim()) ;
 
     // Permet de déclarer un tableau a deux dimensions
-    let tab = [];
-    tab [0] = [] ;
 
-    // Permet de separer les differentes catégories
-    //tab [0] = MyArray[0].split(",") ;
-    // Donne la taille du tableau a 2D
-    //let tabSize = tab[0].length; 
 
-    let tabSize = MyArray[0].split(",").length;
-  
+ // Sépare les lignes
 
-    for (let i = 0; i < size; i++) {
-        tab[i] = MyArray[i].split(",");
-        console.log(tab[i].join(" | "));
-    }
+// Crée un tableau 2D
+let tab = MyArray.map(ligne => ligne.split(","));
 
+// Convertit les âges en nombres (en retirant "yo")
+for (let i = 1; i < tab.length; i++) { // commence à 1 pour éviter l'entête
+    tab[i][1] = parseInt(tab[i][1]); // "25yo" devient 25
+}
+
+// Affiche le tableau 2D
+for (let i = 0; i < tab.length; i++) {
+    console.log(tab[i].join(" | "));
+}
 
    // alert(tab[0][0] + "\n" + tab[1][0]);
     
