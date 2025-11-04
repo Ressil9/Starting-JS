@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        div{
+            border : 1px solid orange;
+            padding: 20px;
+            margin: 10px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="gros_titre">Les evenements</h1>
+    <div id="div1">
+        <p id="p1">Phase de bouillonement</p>
+    </div>
+    <div id="div2">
+        <p id="p2">Phase de capture utilisée</p>
+    </div>
+
+</body>
+<script>
+    var div1 = document.getElementById('div1') ;
+    var p1 = document.getElementById("p1") ;
+
+    var div2 = document.getElementById('div2') ;
+    var p2 = document.getElementById("p2") ;
+
+    // Phase de bouillonement pour p1 et div1
+    div1.addEventListener('click', MessageDiv1);
+    p1.addEventListener('click', MessageP1);
+
+
+    function MessageDiv1 () {
+        alert ("Evenement du div1") ;
+    }
+
+    function MessageP1 () {
+        alert ("Evenement du p1") ;
+    }
+
+    // Phase de capture utilisé pour div2 et p2
+    div2.addEventListener('click', MessageDiv2,true);
+    p2.addEventListener('click', MessageP2,true);
+
+    function MessageDiv2 () {
+        alert ("Evenement du div2") ;
+    }
+
+    function MessageP2 () {
+        alert ("Evenement du p2") ;
+    }
+
+
+
+
+
+</script>
+<script>
+    // var div = document.getElementById('div');
+    // var p1 = document.querySelector('p');
+
+    // div.addEventListener("click",MessageDiv);
+    // p1.addEventListener("click",MessageP);
+
+    // function MessageDiv () {
+    //     alert ("evenement du div") ;
+    // }
+ 
+    // function MessageP () {
+    //     alert ("evenement du p") ;
+    // }
+
+
+
+
+
+</script>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        div{
+            border : 1px solid orange;
+            padding: 20px;
+            margin: 10px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="gros_titre">Les evenements</h1>
+    <div id="div1">
+        <p id="p1">Un exemple plus <strong>complexe</strong></p>
+    </div>
+     
+</body>
+<script>
+    var div1 = document.getElementById('div1') ;
+    var p1 = document.getElementById("p1") ;
+
+    var body = document.body;
+    var div1 = document.getElementById ('div1');
+    var p1 = document.getElementById ('p1');
+    var strong = document.querySelector('strong');
+    
+    p1.addEventListener('click', CP1, true);
+    strong.addEventListener('click', CS, true);
+    
+
+
+
+
+
+
+
+    // Phase de bouillonement pour p1 et div1
+   
+
+
+    function MessageDiv1 () {
+        alert ("Evenement du div1") ;
+    }
+
+    function MessageP1 () {
+        alert ("Evenement du p1") ;
+    }
+
+    // Phase de capture utilisé pour div2 et p2
+    div2.addEventListener('click', MessageDiv2,true);
+    p2.addEventListener('click', MessageP2,true);
+
+    function MessageDiv2 () {
+        alert ("Evenement du div2") ;
+    }
+
+    function MessageP2 () {
+        alert ("Evenement du p2") ;
+    }
+
+</script>
+</html>
