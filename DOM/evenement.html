@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- creer un bouton cliquant <p onclick="alert('bravo');">Cliquez ici !</p>  -->
+
+    <!--  va changer le texte <p onclick="this.textContent= 'Merci'">Cliquez ici !</p>  -->
+    <p>Cliquez ici !</p>
+    <p><strong>second paragraphe</strong></p> 
+
+
+</body>
+<script>
+    /* var p1 = document.querySelector('p');
+
+     function changeTexte () {
+        this.innerHTML = '<strong>Bravo !</strong>';
+        this.style.color = 'blue';
+    }
+
+    p1.addEventListener ('click',changeTexte);*/
+
+    var p1 = document.querySelector('p');
+    p1.addEventListener ('mouseover',Function1);
+    p1.addEventListener ('mouseout', Reset1);
+    p1.addEventListener ('mousedown',Function2);
+    p1.addEventListener ('mouseout', Reset2);
+
+    function Function1 () {
+        this.innerHTML = "Cliquez moi maintenant";
+        this.style.backgroundColor = 'red';
+    }
+
+    function Function2 () {
+        this.innerHTML = " Bravo ";
+        this.style.color = "purple";
+        this.style.fontWeight = "bold";
+        this.style.fontSize = "24px";
+    }
+
+    function Reset1 () {
+        this.innerHTML = 'Passez sur moi !';
+        this.style.color = '';
+    }
+    
+    function Reset2 () {
+        this.innerHTML = "Cliquez moi maintenant";
+        this.style.backgroundColor = '';
+        this.style.fontWeight = '';
+        this.style.fontSize = '';    
+    }
+
+
+</script>
+</html>
