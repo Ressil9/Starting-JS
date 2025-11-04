@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id='gros_titre'>DOM</h1>
+    <div>
+        <p class="para">Premier paragraphe</p>
+        <p class="para">Second <strong>paragraphe</strong></p></div>
+</body>
+<script>
+    // Ce script nous a permis d'acceder a la premiere class du body
+    /*let p = document.querySelector(".para");
+    let div = p.parentNode;
+    div.style.color = 'orange' ;*/
+
+
+
+
+
+    /*
+    var b = document.body;
+    var div = b.childNodes[3];
+
+    var p1 = div.childNodes[1];
+
+    var texte = p1.childNodes[0].nodeValue;
+
+    alert(texte) ;*/
+
+
+
+
+    var p2 = document.querySelectorAll('.para')[1];
+    var premier = p2.firstChild;
+    var dernier = p2.lastChild;
+
+    var inner1 = premier.nodeValue ;
+    var inner2 = dernier.innerHTML;
+
+    alert ("Contenu du premier enfant : "+ inner1 + "\nContenu du deuxieme enfant : " + inner2);
+
+</script>
+</html>
