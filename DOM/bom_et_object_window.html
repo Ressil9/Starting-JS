@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="gros_titre">Le BOM</h1>
+    <button id="ouvrir">Ouvrir une nouvelle fenetre</button>
+    <button id="fermer">Fermer la fenetre</button>
+    <button id="modifier">Modifier la taille de la fenetre</button>
+    
+</body>
+<script>
+// var para = document.querySelector ("p");
+// para.addEventListener('click', fenetre);
+
+// function fenetre(){
+//     window.open ('https://pierre-giraud.com','_blank', 'width = 500, height = 300');
+// }
+
+
+
+var ouvrir = document.getElementById ('ouvrir');
+var fermer = document.getElementById ('fermer');
+var modifier = document.getElementById('modifier');
+
+var fenetre ;
+
+ouvrir.addEventListener('click',fOuvrir) ;
+fermer.addEventListener('click',fFermer) ;
+modifier.addEventListener('click',fModifier) ;
+
+function fOuvrir () {
+    fenetre = window.open ('https://pierre-giraud.com','_blank','width = 500');
+}
+
+function fFermer () {
+    fenetre.close();
+}
+
+function fModifier (){
+    fenetre.resizeTo(500,20);
+}
+
+
+
+</script>
+</html>

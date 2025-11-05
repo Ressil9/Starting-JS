@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les évènements</title>
+    <style>
+        div {
+            border: 1px solid orange;
+            background-color: #29B;
+            padding: 20px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="gros_titre">Les évènements</h1>
+    <div id="div1">
+        <p id="p1">Qui est le déclencheur le porteur d'évènements</p>
+    </div>
+    
+</body>
+<script>
+    var div1 = document.getElementById('div1');
+    var p1 = document.getElementById('p1');
+
+    div1.addEventListener('click',TexteD, true) ;
+    p1.addEventListener('click',TexteP, true) ;
+
+    function TexteD (e) {
+        alert('Stop a la propagation');
+        e.stopPropagation ();
+    }
+
+    
+    function TexteP () {
+        alert('Ceci ne s\'afficheras pas');
+    }
+    /*function Message (event) {
+        this.innerHTML = 'Element declencheur'+ "<br>Element portant l'evenement"+ event.currentTarget ;
+    }*/
+
+   /*function Message (event) {
+        this.innerHTML = "Type d'évènement déclenché : "+ event.type ;
+    }*/
+
+
+</script>
+</html>
