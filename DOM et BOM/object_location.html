@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="gros_titre">Le BOM</h1>
+    <button id="charger">Charger un nouveau document</button>
+    <button id="recharger">Recharger le document</button>
+    <button id="changer">Remplacer le document</button>
+    <p></p>
+    
+</body>
+<script>
+    var para = document.querySelector("p") ;
+
+    var charger = document.getElementById('charger');
+    var recharger = document.getElementById('recharger');
+    var changer = document.getElementById('changer');
+
+    charger.addEventListener ('click', fCharger) ;
+    recharger.addEventListener ('click', fRecharger) ;
+    changer.addEventListener ('click', fChanger) ;
+
+
+    function fCharger (){
+        location.assign('https://google.com');
+    }
+    function fRecharger(){
+        location.reload(); 
+    }
+    function fChanger (){
+        location.replace("https://nike.com") ; 
+    } 
+
+    var url = location.href;
+    var chemin = location.pathname;
+
+    para.innerHTML = 'URL : ' + url + '<br>Chemin : ' + chemin ;
+
+
+</script>
+</html>
