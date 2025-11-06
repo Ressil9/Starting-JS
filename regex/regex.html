@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGEX</title>
+</head>
+<body>
+    <p>Engagez vous qu'ils disaient, rengagez vous qu'ils disaient !</p>
+    <p id="reg"></p>
+</body>
+<script>
+    //var expr = document.querySelector('p');
+
+    /*var r1 = /engagez/i;
+    var r2 = /engagez/ig;
+
+    var res1 = expr.textContent.match(r1);
+    var res2 = expr.textContent.match(r2);*/
+
+
+
+
+
+
+    /*var r1 = /engagez/i;
+    var r2 = /engagez/;
+
+    var res1 = expr.textContent.search(r1);
+    var res2 = expr.textContent.search(r2);*/
+    
+    
+
+
+    
+    
+    
+    /*var r1 = /vous/g;
+    var r2 = /vous/;
+
+    var res1 = expr.textContent.replace(r1, 'moi');
+    var res2 = expr.textContent.replace(r2, 'moi');
+
+
+    var resultat = document.getElementById ('reg');
+    resultat.innerHTML = 'Resultat match() sur regex 1 : ' + res1 +
+    '<br>Resultat match() sur regex 2 : ' + res2 ;*/
+
+
+
+
+    /*var rec = document.querySelector('p').textContent;
+
+    var r1 = /ENGAGEZ/;
+    var r2 = /ENGAGEZ/i;
+
+    var res1 = r1.test(rec);
+    var res2 = r2.test(rec);*/
+
+
+
+
+    var rec = document.querySelector('p').textContent;
+
+    var r1 = /aient/;
+
+    var res1 = r1.exec(rec);
+
+    
+    var resultat = document.getElementById('reg');
+    resultat.innerHTML = 'Resultat 1 : ' + res1;
+</script>
+</html>
